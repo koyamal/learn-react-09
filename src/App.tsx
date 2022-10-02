@@ -26,6 +26,7 @@ export default function App() {
       {todos.map((todo) => {
         return (
           <Todo
+            key={todo.id}
             title={todo.title}
             userId={todo.userId}
             completed={todo.completed}
