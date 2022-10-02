@@ -1,4 +1,5 @@
 export const Todo = (props) => {
-  const { title, userid } = props;
-  return <p>{`${title}(user: ${userid})`}</p>;
+  const { title, userid, completed } = props;
+  const completeMark = completed ? "[Complete]" : "[Incomplete]";
+  return <p>{`${completeMark} ${title}(user: ${userid})`}</p>;
 };
