@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import "./styles.css";
+import { Todo } from "./Todo";
 
 export default function App() {
   const [todos, setTodos] = useState<any>([]);
@@ -14,7 +15,7 @@ export default function App() {
     <div className="App">
       <button onClick={onClickFetchData}>Get data</button>
       {todos.map((todo) => {
-        return <p>{todo.title}</p>;
+        return <Todo title={todo.title} userid={todo.userid} />;
       })}
     </div>
   );
